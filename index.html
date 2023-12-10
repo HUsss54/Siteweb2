@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Raccourcis </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        
+        <h1>Mes Raccourcis</h1>
+
+
+        <div class="video">
+
+            <video src="v.mp4" height="150" autoplay loop muted ></video>
+            
+        </div>
+
+        <div class="horloge" >
+
+            <script type="text/javascript"> 
+                function refresh(){
+                    var t = 1000; // rafraîchissement en millisecondes
+                    setTimeout('showDate()',t)
+                }
+                
+                function showDate() {
+                    var date = new Date()
+                    var h = date.getHours();
+                    var m = date.getMinutes();
+                    var s = date.getSeconds();
+                    if( h < 10 ){ h = '0' + h; }
+                    if( m < 10 ){ m = '0' + m; }
+                    if( s < 10 ){ s = '0' + s; }
+                    var time = h + ':' + m + ':' + s
+                    document.getElementById('horloge').innerHTML = time;
+                    refresh();
+                 }
+             </script>
+          <body onload=showDate();>
+             <span id='horloge' style="background-color:#004b88;color:rgb(255, 255, 255);font-size:40px;"></span>
+
+        </div>
+        <h3>Ecole : </h3>
+
+        <div class="raccoursi">
+            
+            <li><a href="https://www.ecoledirecte.com/login?cameFrom=%2FE%2F2691%2FEmploiDuTemps">Ecole D</a></li>
+            <li><a href="https://www.web-sciences.com/hub/login?next=%2Fhub%2Fuser%2Foumani%2Flab%2Ftree%2Fdocuments%2Fchap_1%2Fprise_en_main_jupyter.ipynb%3Fredirects%3D1">Nsi</a></li>
+            <li><a href="https://numerique.arbs.com/dashboard">Livre</a></li>
+            
+
+        </div>
+
+        <div class="cache">
+            <a href="Menu_cacher.html">Page secrète</a>
+        </div>
+    </div>
+
+    
+    
+</body>
+</html>
